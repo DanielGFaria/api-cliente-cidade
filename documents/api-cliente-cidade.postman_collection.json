@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "9d1dee26-10ad-4474-92b2-afc0e5ea74a6",
+		"name": "api-cliente-cidade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Cadastrar cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"nmCliente\": \"Daniel Galvão Faria\",\n        \"cdSexo\": \"M\",\n        \"dtNascimento\": \"1994-11-01T03:00:00.000+0000\",\n        \"idCidade\": {\n            \"idCidade\": 2,\n            \"nmCidade\": \"BARUERI\",\n            \"idEstado\": \"SP\"\n       }\n }"
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/cadastrarCliente",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"cadastrarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar o nome do cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"idCliente\": 1,\n        \"nmCliente\": \"Daniel Galvão Faria\"\n    }"
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/alteraNomeCliente",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"alteraNomeCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar cliente pelo nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/clientePorNome/Faria",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"clientePorNome",
+								"Faria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar cliente pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/clientePorId/2",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"clientePorId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/apagaClientePorId/4",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"apagaClientePorId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cidade",
+			"item": [
+				{
+					"name": "Cadastrar Cidade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"nmCidade\": \"SALVADOR\",\n        \"idEstado\": \"BA\"\n    }"
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/cadastrarCidade",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"cadastrarCidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar cidade pelo nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/cidadePorNome/SALVADOR",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"cidadePorNome",
+								"SALVADOR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar cidade pelo estado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ambiente}}/api/cidadePorEstado/SP",
+							"host": [
+								"{{ambiente}}"
+							],
+							"path": [
+								"api",
+								"cidadePorEstado",
+								"SP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
