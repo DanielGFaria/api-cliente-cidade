@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DanielGFaria/api-cliente-cidade.svg?branch=master)](https://travis-ci.org/DanielGFaria/api-cliente-cidade)
+
 # api-cliente-cidade  
 Api criada para participação no Processo seletivo da Compasso  
 
